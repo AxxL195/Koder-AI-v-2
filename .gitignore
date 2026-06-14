@@ -1,0 +1,27 @@
+# ===== Secrets — NEVER commit these =====
+.env
+*.pem
+private-key*.pem
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# ===== IDE/editor junk =====
+.vscode/
+.idea/
+*.swp
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+
+
+koder-ai-code-reviewer.2026-06-14.private-key.pem
