@@ -16,6 +16,6 @@ async def manual_index(background_tasks: BackgroundTasks):
 
     installation_token = await get_installation_token(installation_id)
 
-    background_tasks.add_task(fetch_repo,owner,repo,installation_token)
+    background_tasks.add_task(fetch_repo,owner,repo,installation_token,installation_id)
     
     return {"status": "indexing started"}

@@ -1,8 +1,9 @@
 from RAG.indexing import file_index
+from RAG.embedding import embed_chunks
 from services.github_fetch_repo import fetch_repo_details
 import httpx
 
-async def fetch_repo(owner:str,repo:str,installation_token:str):
+async def fetch_repo(owner:str,repo:str,installation_token:str,installation_id:int):
     repo_details =  await fetch_repo_details(owner,repo,installation_token)
     branch= repo_details['default_branch']
 
@@ -21,6 +22,5 @@ async def fetch_repo(owner:str,repo:str,installation_token:str):
 
     files=response.json()['tree']
 
-    await file_index(owner,repo,installation_token,files)
     
    
